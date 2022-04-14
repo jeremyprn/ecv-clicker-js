@@ -75,8 +75,8 @@ const renderPlayer = (player) =>{
         <span class="life" style="width:${ (100 * player.getClasse().getLife()) / baseLifePlayer }%;"></span>
     </div>
     <div class="stats">
-    
-        // ${player.getClasse().getDamage()} Attaque | ${player.getClasse().getDefense()} Defense | ${player.getExperience()} XP | ${player.getLevel()} lvl
+        <p>Niveau: ${player.getLevel()}</p>
+        <span class="level" style="width:${ (100 * player.getExperience()) / player.getNextExpLvl() }%;"></span>
     </div>
      `;
     // playerDiv.innerHTML = `<b>${player.getUsername()}</b> | ${player.getClasse().getLife()} ♥

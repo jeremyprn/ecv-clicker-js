@@ -4,7 +4,7 @@ export class Warrior{
         this.name = "warrior";
         this.life = 125;
         this.defense = 150;
-        this.damage = 150;
+        this.damage = 15;
         this.melee = 100;
 
         this.getName = () => {

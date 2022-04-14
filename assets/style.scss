@@ -45,7 +45,7 @@ body{
                 display: flex;
                 position: relative;
                 // border:1px solid red;
-                height: 16px;
+                height: 22px;
 
                 p{
                     position: absolute;
@@ -56,6 +56,26 @@ body{
                 }
                 .life{
                     background-color: rgb(20, 212, 0); 
+                    height: 100%;
+                }
+            }
+
+            .stats{
+                width: 300px;
+                display: flex;
+                position: relative;
+                // border:1px solid red;
+                height: 22px;
+
+                p{
+                    position: absolute;
+                    border: 1px solid black;
+                    height: 100%;
+                    width: 100%;
+                    text-align: center;
+                }
+                .level{
+                    background-color: rgb(27, 165, 196); 
                     height: 100%;
                 }
             }
@@ -91,7 +111,7 @@ body{
                     display: flex;
                     position: relative;
                     // border:1px solid red;
-                    height: 16px;
+                    height: 22px;
 
                     p{
                         position: absolute;

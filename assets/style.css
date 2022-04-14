@@ -45,7 +45,7 @@ body #gamePlay .playerContainer .lifeContainer {
   width: 300px;
   display: flex;
   position: relative;
-  height: 16px;
+  height: 22px;
 }
 
 body #gamePlay .playerContainer .lifeContainer p {
@@ -58,6 +58,26 @@ body #gamePlay .playerContainer .lifeContainer p {
 
 body #gamePlay .playerContainer .lifeContainer .life {
   background-color: #14d400;
+  height: 100%;
+}
+
+body #gamePlay .playerContainer .stats {
+  width: 300px;
+  display: flex;
+  position: relative;
+  height: 22px;
+}
+
+body #gamePlay .playerContainer .stats p {
+  position: absolute;
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+body #gamePlay .playerContainer .stats .level {
+  background-color: #1ba5c4;
   height: 100%;
 }
 
@@ -94,7 +114,7 @@ body #gamePlay #monster #monsterStats .lifeContainer {
   width: 100%;
   display: flex;
   position: relative;
-  height: 16px;
+  height: 22px;
 }
 
 body #gamePlay #monster #monsterStats .lifeContainer p {
