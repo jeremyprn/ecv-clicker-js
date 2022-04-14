@@ -15,16 +15,34 @@ body {
   gap: 25px;
 }
 
+body #gameOver {
+  display: none;
+}
+
+body #gameOver.active {
+  display: block;
+}
+
 body .playerActions {
   display: flex;
   gap: 10px;
 }
 
-body #gameChoice, body #gamePlay {
+body #gameChoice {
   display: none;
 }
 
-body #gameChoice.active, body #gamePlay.active {
+body #gameChoice.active {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+body #gamePlay {
+  display: none;
+}
+
+body #gamePlay.active {
   display: flex;
   flex-direction: row-reverse;
 }
@@ -39,6 +57,53 @@ body #gamePlay .playerContainer {
   flex-direction: column;
   align-items: center;
   max-width: 650px;
+}
+
+body #gamePlay .playerContainer .playerActions {
+  margin-top: 15px;
+}
+
+body #gamePlay .playerContainer .playerActions button {
+  width: 145px;
+  height: 35px;
+}
+
+body #gamePlay .playerContainer #ascii-warrior, body #gamePlay .playerContainer #ascii-magician {
+  display: none;
+}
+
+body #gamePlay .playerContainer #ascii-warrior.active, body #gamePlay .playerContainer #ascii-magician.active {
+  display: block;
+}
+
+body #gamePlay .playerContainer #playerInfos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body #gamePlay .playerContainer #playerInfos p {
+  text-align: center;
+}
+
+body #gamePlay .playerContainer .manaContainer {
+  width: 300px;
+  display: flex;
+  position: relative;
+  height: 22px;
+}
+
+body #gamePlay .playerContainer .manaContainer p {
+  position: absolute;
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+body #gamePlay .playerContainer .manaContainer .mana {
+  background-color: #2dc4ea;
+  height: 100%;
 }
 
 body #gamePlay .playerContainer .lifeContainer {
@@ -65,7 +130,8 @@ body #gamePlay .playerContainer .stats {
   width: 300px;
   display: flex;
   position: relative;
-  height: 22px;
+  flex-direction: column;
+  height: auto;
 }
 
 body #gamePlay .playerContainer .stats p {
@@ -74,18 +140,19 @@ body #gamePlay .playerContainer .stats p {
   height: 100%;
   width: 100%;
   text-align: center;
+  height: 22px;
 }
 
 body #gamePlay .playerContainer .stats .level {
   background-color: #1ba5c4;
-  height: 100%;
+  height: 22px;
 }
 
 body #gamePlay #monster {
   width: 300px;
   display: flex;
   justify-content: end;
-  margin-bottom: 40px;
+  margin-bottom: 72px;
   align-items: center;
   flex-direction: column;
 }
@@ -128,9 +195,4 @@ body #gamePlay #monster #monsterStats .lifeContainer p {
 body #gamePlay #monster #monsterStats .lifeContainer .life {
   background-color: #ed615f;
   height: 100%;
-}
-
-button {
-  width: 100px;
-  height: 25px;
 }

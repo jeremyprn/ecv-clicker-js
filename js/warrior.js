@@ -5,7 +5,18 @@ export class Warrior{
         this.life = 125;
         this.defense = 150;
         this.damage = 15;
-        this.melee = 100;
+        this.mana = 100;
+        this.special = 100;
+
+        this.getMana = () => {
+            return this.mana;
+        }
+
+        this.setMana = (mana) => {
+            this.mana = mana;
+
+            return this;
+        }
 
         this.getName = () => {
             return this.name;
@@ -35,12 +46,12 @@ export class Warrior{
             return this;
         }
 
-        this.getMelee = () => {
-            return this.melee;
+        this.getSpecial = () => {
+            return this.special;
         }
 
-        this.setMelee = (melee) => {
-            this.melee = melee;
+        this.setSpecial = (special) => {
+            this.special = special;
 
             return this;
         }

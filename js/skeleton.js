@@ -7,7 +7,7 @@ export class Skeleton extends Monster {
         this.username = "skeleton";
         this.life = 65;
         this.damage = 10;
-        this.experience = 20;
+        this.experience = 75;
     }
     
 }

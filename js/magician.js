@@ -6,9 +6,7 @@ export class Magician{
         this.defense = 75;
         this.damage = 25;
         this.mana = 100;
-        this.spellDamage = 80;
-        this.melee = 10;
-        this.fireBall = 175
+        this.special = 175
         
 
         this.getName = () => {
@@ -40,15 +38,6 @@ export class Magician{
             return this;
         }
 
-        this.getMelee = () => {
-            return this.melee;
-        }
-
-        this.setMelee = (melee) => {
-            this.melee = melee;
-
-            return this;
-        }
         this.getDefense = () => {
             return this.defense;
         }
@@ -68,21 +57,13 @@ export class Magician{
 
             return this;
         }
-        this.getSpellDamage = () => {
-            return this.spellDamage;
+        
+        this.getSpecial = () => {
+            return this.special;
         }
 
-        this.setSpellDamage = (spellDamage) => {
-            this.spellDamage = spellDamage;
-
-            return this;
-        }
-        this.getFireBall = () => {
-            return this.fireBall;
-        }
-
-        this.setFireBall = (fireBall) => {
-            this.fireBall = fireBall;
+        this.setSpecial = (special) => {
+            this.special = special;
 
             return this;
         }

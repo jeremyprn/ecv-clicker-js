@@ -9,11 +9,13 @@
 </head>
 <body>
     <div id="gameChoice" class="active">
+      <div>
         <label for="chooseWarrior">Guerrier</label>
         <input type="radio" name="chooseClasse" id="chooseWarrior" checked>
 
         <label for="chooseMagician">Magicien</label>
         <input type="radio" name="chooseClasse" id="chooseMagician">
+      </div>
 
         <input type="text" name="username" id="chooseUsername" placeholder="Pseudo">
 
@@ -22,6 +24,7 @@
 
     <div id="gamePlay">
         <div id="monster">
+            <div id="globalInfos"></div>
             <pre id="ascii-gobelin" class="active"style="word-wrap: break-word; white-space: pre-wrap;">
         ,      ,
        /(.-""-.)\
@@ -64,8 +67,8 @@
         </div>
         
         <div class="playerContainer">
-          <div id="player">
-            <pre id="ascii-skeleton" style="word-wrap: break-word; white-space: pre-wrap;">
+            <div id="playerInfos"></div>
+            <pre id="ascii-warrior" class="active" style="word-wrap: break-word; white-space: pre-wrap;">
               _,.
               ,` -.)
              ( _/-\\-._
@@ -87,14 +90,41 @@
               |     {__)
                     ()
                    </pre>
+            <pre id="ascii-magician" style="word-wrap: break-word; white-space: pre-wrap;">
+   .*.
+ *' + '*      ,       ,
+  *'|'*       |`;`;`;`|
+    |         |:.'.'.'|
+    |         |:.:.:.:|
+    |         |::....:|
+    |        /`   / ` \
+    |       (   .' ^ \^)
+    |_.,   (    \    -/(
+ ,~`|   `~./     )._=/  )  ,,
+{   |     (       )|   (.~`  `~,
+{   |      \   _.'  \   )       }
+;   |       ;`\      `)-`       }     _.._
+'.(\,     ;   `\    / `.       }__.-'__.-'
+  ( (/-;~~`;     `\_/    ;   .'`  _.-'
+   `/|\/   .'\.    /o\   ,`~~`~~~~`
+    \| ` .'   \'--'   '-`
+     |--',==~~`)       (`~~==,_
+  ,=~`      `-.     /       `~=,
+,=`             `-._/            `=,
+            </pre>
             <div id="playerStats"></div>
-          </div>
           <div class="playerActions">
               <button id="playerAttack">Attaquer</button>
-              <button id="playerHeal">Se soigner</button>
+              <button id="playerSpecial">Attaque spéciale (75 Mana)</button>
+              <button id="playerHeal">Se soigner (100 pièces)</button>
           </div>
         </div>
         
+    </div>
+
+    <div id="gameOver">
+      <b>Vous avez perdu !</b>
+      <div id="gameOverStats"></div>
     </div>
     
 </body>
