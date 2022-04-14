@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <div id="gameChoice" class="active">
+        <label for="chooseWarrior">Guerrier</label>
+        <input type="radio" name="chooseClasse" id="chooseWarrior" checked>
+
+        <label for="chooseMagician">Magicien</label>
+        <input type="radio" name="chooseClasse" id="chooseMagician">
+
+        <input type="text" name="username" id="chooseUsername" placeholder="Pseudo">
+
+        <input type="button" id="chooseClasseBttn" value="Jouer">
+    </div>
+
+    <div id="gamePlay">
+        <div id="monster">
+            <pre id="ascii-gobelin" class="active"style="word-wrap: break-word; white-space: pre-wrap;">
+        ,      ,
+       /(.-""-.)\
+   |\  \/      \/  /|
+   | \ / =.  .= \ / |
+   \( \   o\/o   / )/
+    \_, '-/  \-' ,_/
+     /   \__/   \
+     \ \__/\__/ /
+   ___\ \|--|/ /___
+ /`    \      /    `\
+/       '----'       \
+            </pre>
+            <pre id="ascii-zombie" style="word-wrap: break-word; white-space: pre-wrap;">
+             ,
+         _,-""-._
+       ,"        ".
+      /    ,-,  ,"\
+     "    /   \ | o|
+    |     -   | |  |
+     \    `-o-"  `-',
+   ___`,   _.--'`'--`___
+ /`     `--`---'        `\
+/                         \
+            </pre>
+            <pre id="ascii-skeleton" style="word-wrap: break-word; white-space: pre-wrap;">
+       .-=-=-.
+      /       \
+     |         |
+     | )     ( |
+     \/ .\ /. \/
+     (    ^    )
+      |.     .|
+   ___||xxxxx||___
+ /`   |       |   `\
+/     '-._._.-'     \
+            </pre>
+         
+            <div id="monsterStats"></div>
+        </div>
+        
+        <div class="playerContainer">
+          <div id="player">
+            <pre id="ascii-skeleton" style="word-wrap: break-word; white-space: pre-wrap;">
+              _,.
+              ,` -.)
+             ( _/-\\-._
+            /,|`--._,-^|            ,
+            \_| |`-._/||          ,'|
+              |  `-, / |         /  /
+              |     || |        /  /
+               `r-._||/   __   /  /
+           __,-<_     )`-/  `./  /
+          '  \   `---'   \   /  /
+              |           |./  /
+              /           //  /
+          \_/' \         |/  /
+           |    |   _,^-'/  /
+           |    , ``  (\/  /_
+            \,.->._    \X-=/^
+            (  /   `-._//^`
+             `Y-.____(__}
+              |     {__)
+                    ()
+                   </pre>
+            <div id="playerStats"></div>
+          </div>
+          <div class="playerActions">
+              <button id="playerAttack">Attaquer</button>
+              <button id="playerHeal">Se soigner</button>
+          </div>
+        </div>
+        
+    </div>
+    
+</body>
+
+<script type="module" src="./js/main.js"></script>
+</html>

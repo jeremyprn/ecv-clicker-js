@@ -1,0 +1,119 @@
+*, ::before, ::after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:25px;
+
+    .playerActions{
+        display: flex;
+        gap:10px;
+    }
+
+    #gameChoice, #gamePlay {
+        display: none;
+
+        &.active{
+            display: flex;
+            flex-direction: row-reverse;
+            // border:1px solid green;
+        }
+    }
+
+    #gamePlay{
+        gap:50px;
+
+        .playerContainer{
+            // border:1px solid blue;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            max-width: 650px;
+
+            .lifeContainer{
+                width: 300px;
+                display: flex;
+                position: relative;
+                // border:1px solid red;
+                height: 16px;
+
+                p{
+                    position: absolute;
+                    border: 1px solid black;
+                    height: 100%;
+                    width: 100%;
+                    text-align: center;
+                }
+                .life{
+                    background-color: rgb(20, 212, 0); 
+                    height: 100%;
+                }
+            }
+        }
+
+        #monster{
+            // border:1px solid red;
+            width: 300px;
+            display: flex;
+            justify-content: end;
+            margin-bottom: 40px;
+            align-items: center;
+            flex-direction: column;
+            #ascii-gobelin, #ascii-zombie, #ascii-skeleton{
+                display: none;
+                &.active{
+                    display: block;
+                }
+            }
+
+            #monsterStats{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap:15px;
+
+                .username {
+                    width: 100%;
+                    text-align: center;
+                }
+                .lifeContainer{
+                    width: 100%;
+                    display: flex;
+                    position: relative;
+                    // border:1px solid red;
+                    height: 16px;
+
+                    p{
+                        position: absolute;
+                        border: 1px solid black;
+                        height: 100%;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .life{
+                        background-color: rgb(237, 97, 95); 
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+button{
+    width: 100px;
+    height: 25px;
+}
